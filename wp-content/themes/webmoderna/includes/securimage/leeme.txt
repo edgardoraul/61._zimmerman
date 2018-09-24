@@ -1,0 +1,3 @@
+En este directorio deben ir los archivos de la librería Securimage
+
+http://www.phpcaptcha.org/
