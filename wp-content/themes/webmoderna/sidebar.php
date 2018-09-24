@@ -19,16 +19,16 @@
 					$email_contact		=	of_get_option( 'email_contact', '' );
 
 				?>
-				<section class="sidebar__section">
+				<!-- <section class="sidebar__section">
 					<header class="sidebar__section__header">
 						<h3 class="sidebar__section__header__title">
-							<?php _e('Buscar', 'webmoderna');?>
+							<?php //_e('Buscar', 'webmoderna');?>
 						</h3>
 					</header>
 					<article class="sidebar__section__article">
-						<form method="get" id="searchform" action="<?php echo home_url();?>">
+						<form method="get" id="searchform" action="<?php //echo home_url();?>">
 							<div class="search">
-								<input type="search" name="s" id="s" value="<?php the_search_query();?>" placeholder="..." />
+								<input type="search" name="s" id="s" value="<?php //the_search_query();?>" placeholder="..." />
 								<button type="submit">
 									<span class="icon-search"></span>
 								</button>
@@ -36,23 +36,23 @@
 							</div>
 						</form>
 					</article>
-				</section>
+				</section> -->
 
-				<section class="sidebar__section">
+				<!-- <section class="sidebar__section">
 					<header class="sidebar__section__header">
 						<h3 class="sidebar__section__header__title">
-							<?php _e('Contáctenos', 'webmoderna');?>
+							<?php //_e('Contáctenos', 'webmoderna');?>
 						</h3>
 					</header>
 					<article class="sidebar__section__article">
 						<address>
-							<?php if ( $direccion_web )
+							<?php //if ( $direccion_web )
 							{
-								echo $direccion_web;
+								//echo $direccion_web;
 							};?>
 						</address>
 					</article>
-				</section>
+				</section> -->
 
 				<section class="sidebar__section">
 					<header class="sidebar__section__header">
@@ -100,7 +100,7 @@ if ( $entradas->have_posts() ) {
 									<a href="<?php the_permalink();?>"><?php echo titulo_corto('...', 50);?></a>
 								</h4>
 								<div class="sidebar__section__article__fecha">
-									<span class="icon-calendar icon-right"></span><?php echo get_the_date();?>
+									<span class="icon-calendar-alt-stroke icon-right"></span><?php echo get_the_date();?>
 								</div>
 							</div>
 						</article>

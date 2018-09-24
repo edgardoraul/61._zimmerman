@@ -1,5 +1,6 @@
 // El Sidebar y todo su contenido
 .sidebar
+	background blanco_puro
 	box-sizing border-box
 	margin 0
 	overflow hidden
@@ -12,11 +13,12 @@
 
 		&__article
 			border 1px solid gris_fuerte
+			border-radius 0 0 3px 3px
 			box-sizing border-box
 			color gris_suave
 			line-height 150%
 			overflow hidden
-			padding 0.5em
+			padding $em
 
 			ul
 				// list-style-image url("../img/Entypo_e766(0)_16.png")
@@ -34,8 +36,8 @@
 
 			&__content-left
 				display table-cell
-				max-width 100px
-				min-width 100px
+				max-width 50px
+				min-width 50px
 				vertical-align top
 				
 			&__content-right
@@ -63,7 +65,7 @@
 				position relative
 
 				a
-					&:after
+					/*&:after
 						color blanco
 						content "+"
 						display inline-block
@@ -79,10 +81,10 @@
 						transition_comun()
 						vertical-align middle
 						width 100%
-						z-index 2
+						z-index 2*/
 
 					&:before
-						background verde_azulado
+						background rojo_google
 						content ""
 						display block
 						height 100%
@@ -124,12 +126,13 @@
 
 		&__header
 			background gris_fuerte
-			padding 0.5em
+			border-radius 3px 3px 0 0
+			padding ($em/2) $em
 
 			&__title
 				color gris_suave
-				font-family fuente_heading_bold
-				font-size 0.9em
+				font-family fuente_heading
+				font-size $em*0.8
 				margin 0
 				padding 0
 				text-transform uppercase

@@ -241,11 +241,11 @@ elseif ( isset( $_SESSION['ctform']['success'] ) && $_SESSION['ctform']['success
 
 								<div class="alineacion__derecha">
 									<button type="submit">
-										<span class="icon-checkmark icon-right"></span>
+										<span class="icon-check-alt icon-right"></span>
 										<?php _e('Enviar', 'webmoderna');?>
 									</button>
 									<button type="reset">
-										<span class="icon-cross icon-right"></span>
+										<span class="icon-x-altx-alt icon-right"></span>
 										<?php _e('Limpiar', 'webmoderna');?>
 									</button>
 								</div>
