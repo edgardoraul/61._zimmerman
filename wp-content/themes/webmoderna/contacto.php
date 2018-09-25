@@ -162,8 +162,6 @@ $_SESSION['ctform']['success'] = false; // clear success value after running
 // Encabezado normal de la página
 get_header();
 ?>
-<div class="separador"></div>
-
 		<!-- Todo la parte central -->
 		<div class="content con_barra">
 			<main>
@@ -239,7 +237,7 @@ elseif ( isset( $_SESSION['ctform']['success'] ) && $_SESSION['ctform']['success
 									<input  class="captcha__input" type="text" id="ct_captcha" name="ct_captcha"  placeholder="abc12" maxlength="8" />
 								</div>
 
-								<div class="alineacion__derecha">
+								<div class="alineacion__izquierda">
 									<button type="submit">
 										<span class="icon-check-alt icon-right"></span>
 										<?php _e('Enviar', 'webmoderna');?>

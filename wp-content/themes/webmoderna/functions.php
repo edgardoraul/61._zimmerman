@@ -76,7 +76,7 @@ require_once "includes/11._paginacion.php";
 // require_once "includes/13._registro_usuarios.php";
 
 // Url a relativas para testeo
-// require_once "includes/14._url_relativas.php";
+require_once "includes/14._url_relativas.php";
 
 // Equipo de Trabajo
 // require_once "includes/15._equipo_trabajo.php";

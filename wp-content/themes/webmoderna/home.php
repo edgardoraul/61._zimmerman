@@ -9,7 +9,7 @@
 ?>
 
 <?php get_header();
-if ( wpmd_is_notphone() ) {
+
 ?>
 
 		<!-- El Slider -->
@@ -38,7 +38,7 @@ if ( wpmd_is_notphone() ) {
 					<figure>
 						<?php
 						$optional_size	= 'custom-thumb-600-250';
-						$optional_size2	= 'custom-thumb-1200-500';
+						$optional_size2	= 'custom-thumb-2400-1000';
 						$img_id			= get_post_thumbnail_id( $post->ID );
 						$image			= wp_get_attachment_image_src( $img_id, $optional_size );
 						$image2			= wp_get_attachment_image_src( $img_id, $optional_size2 );
@@ -62,10 +62,10 @@ if ( wpmd_is_notphone() ) {
 					</div>
 				</div>
 
-			<?php	;};
+			<?php	;}
 			} else { ?>
 
-				<!-- <div class="slider__item">
+				<div class="slider__item">
 					<figure>
 						<img class="lazyOwl" src="<?php bloginfo('stylesheet_directory');?>/img/slide-2.jpg" alt="imagen" />
 					</figure>
@@ -81,7 +81,7 @@ if ( wpmd_is_notphone() ) {
 						Algo para decir
 					</div>
 				</div>
- -->
+
 		<?php	}
 
 		// Restore original Post Data
@@ -89,7 +89,7 @@ if ( wpmd_is_notphone() ) {
 
 			</div>
 		</div>
-<?php };?>
+<?php //};?>
 		<!-- Fin del Slider -->
 
 		

@@ -3,20 +3,20 @@
 * header.php
 * @package WordPress
 * @subpackage webmoderna
-* @since webmoderna 3.0
+* @since webmoderna 4.0
 * Text Domain: webmoderna
 */
 
 // Variables útiles
-$meta_description = of_get_option('meta_description', '');
-$meta_keywords = of_get_option('meta_keywords2', '');
-$logo_uploader = of_get_option('logo_uploader', '');
-$webmoderna_meta_keywords = rwmb_meta('webmoderna_meta_keywords', '');
-$webmoderna_meta_descripcion = rwmb_meta('webmoderna_meta_descripcion', '');
-$meta_paginas_meta_descripcion = rwmb_meta('meta_paginas_meta_descripcion', '');
-$meta_paginas_meta_keywords = rwmb_meta('meta_paginas_meta_keywords', '');
-$facebook_contact = of_get_option('facebook_contact', '');
-$twitter_contact  = of_get_option('twitter_contact', '');
+$meta_description 				= of_get_option('meta_description', '');
+$meta_keywords 					= of_get_option('meta_keywords2', '');
+$logo_uploader 					= of_get_option('logo_uploader', '');
+$facebook_contact 				= of_get_option('facebook_contact', '');
+$twitter_contact  				= of_get_option('twitter_contact', '');
+$webmoderna_meta_keywords 		= rwmb_meta('webmoderna_meta_keywords', '');
+$webmoderna_meta_descripcion 	= rwmb_meta('webmoderna_meta_descripcion', '');
+$meta_paginas_meta_descripcion 	= rwmb_meta('meta_paginas_meta_descripcion', '');
+$meta_paginas_meta_keywords 	= rwmb_meta('meta_paginas_meta_keywords', '');
 ?>
 
 <!DOCTYPE html>
@@ -34,18 +34,18 @@ $twitter_contact  = of_get_option('twitter_contact', '');
 <?php
 	if ( $meta_description )
 	{
-		echo '<meta name="description" content="' . $meta_description . '" />';
-		echo '<meta property="og:description" content="' . $meta_description . '" />';
+		echo '<meta name="description" content="' . $meta_description . '" />' . "\n";
+		echo '<meta property="og:description" content="' . $meta_description . '" />' . "\n";
 	}
 	else
 	{
-		echo '<meta name="description" content="' . get_bloginfo('description') . '" />';
-		echo '<meta property="og:description" content="' . get_bloginfo('description') . '" />';
+		echo '<meta name="description" content="' . get_bloginfo('description') . '" />' . "\n";
+		echo '<meta property="og:description" content="' . get_bloginfo('description') . '" />' . "\n";
 	};
 
 	if ( $meta_keywords )
 	{
-		echo '<meta name="keywords" content="' . $meta_keywords . '" />';
+		echo '<meta name="keywords" content="' . $meta_keywords . '" />' . "\n";
 	}
 
 } elseif ( is_404() ) { ?>
@@ -55,18 +55,18 @@ $twitter_contact  = of_get_option('twitter_contact', '');
 <?php
 	if ( $meta_description )
 	{
-		echo '<meta name="description" content="' . $meta_description . '" />';
-		echo '<meta property="og:description" content="' . $meta_description . '" />';
+		echo '<meta name="description" content="' . $meta_description . '" />' . "\n";
+		echo '<meta property="og:description" content="' . $meta_description . '" />' . "\n";
 	}
 	else
 	{
-		echo '<meta name="description" content="' . get_bloginfo('description') . '" />';
-		echo '<meta property="og:description" content="' . get_bloginfo('description') . '" />';
+		echo '<meta name="description" content="' . get_bloginfo('description') . '" />' . "\n";
+		echo '<meta property="og:description" content="' . get_bloginfo('description') . '" />' . "\n";
 	};
 
 	if ( $meta_keywords )
 	{
-		echo '<meta name="keywords" content="' . $meta_keywords . '" />';
+		echo '<meta name="keywords" content="' . $meta_keywords . '" />' . "\n";
 	}
 
 } elseif ( is_category() || is_tax() || is_tag() ) { ?>
@@ -76,18 +76,18 @@ $twitter_contact  = of_get_option('twitter_contact', '');
 <?php
 	if ( $meta_description )
 	{
-		echo '<meta name="description" content="' . $meta_description . '" />';
-		echo '<meta property="og:description" content="' . $meta_description . '" />';
+		echo '<meta name="description" content="' . $meta_description . '" />' . "\n";
+		echo '<meta property="og:description" content="' . $meta_description . '" />' . "\n";
 	}
 	else
 	{
-		echo '<meta name="description" content="' . get_bloginfo('description') . '" />';
-		echo '<meta property="og:description" content="' . get_bloginfo('description') . '" />';
+		echo '<meta name="description" content="' . get_bloginfo('description') . '" />' . "\n";
+		echo '<meta property="og:description" content="' . get_bloginfo('description') . '" />' . "\n";
 	};
 
 	if ( $meta_keywords )
 	{
-		echo '<meta name="keywords" content="' . $meta_keywords . '" />';
+		echo '<meta name="keywords" content="' . $meta_keywords . '" />' . "\n";
 	}
 
 } elseif ( is_page() || is_single() ) { ?>
@@ -111,29 +111,30 @@ $twitter_contact  = of_get_option('twitter_contact', '');
 ;?>
 	" />
 <?php
+	echo  "\n";
 	if ( $meta_paginas_meta_descripcion )
 	{
-		echo '<meta name="description" content="' . $meta_paginas_meta_descripcion . '" />';
-		echo '<meta property="og:description" content="' . $meta_paginas_meta_descripcion . '" />';
+		echo '<meta name="description" content="' . $meta_paginas_meta_descripcion . '" />' . "\n";
+		echo '<meta property="og:description" content="' . $meta_paginas_meta_descripcion . '" />' . "\n";
 	}
 	elseif ( $meta_description )
 	{
-		echo '<meta name="description" content="' . $meta_description . '" />';
-		echo '<meta property="og:description" content="' . $meta_description . '" />';
+		echo '<meta name="description" content="' . $meta_description . '" />' . "\n";
+		echo '<meta property="og:description" content="' . $meta_description . '" />' . "\n";
 	}
 	else
 	{
-		echo '<meta name="description" content="' . get_bloginfo('description') . '" />';
-		echo '<meta property="og:description" content="' . get_bloginfo('description') . '" />';
+		echo '<meta name="description" content="' . get_bloginfo('description') . '" />' . "\n";
+		echo '<meta property="og:description" content="' . get_bloginfo('description') . '" />' . "\n";
 	};
 
 	if ( $meta_paginas_meta_keywords )
 	{
-		echo '<meta name="keywords" content="' . $meta_paginas_meta_keywords . '" />';
+		echo '<meta name="keywords" content="' . $meta_paginas_meta_keywords . '" />' . "\n";
 	}
 	elseif ( $meta_keywords )
 	{
-		echo '<meta name="keywords" content="' . $meta_keywords . '" />';
+		echo '<meta name="keywords" content="' . $meta_keywords . '" />' . "\n";
 	}
 };?>
 	<meta name="author" content="<?php bloginfo('name');?>">
@@ -173,9 +174,9 @@ $twitter_contact  = of_get_option('twitter_contact', '');
 	// echo '</script>';
 ;?>
 
-	<script type="text/javascript" id="loadcss">
-	loadCSS( "<?php bloginfo('stylesheet_directory');?>/css/style.css", document.getElementById( "loadcss" ) );
-	</script>
+	<!--<script type="text/javascript" id="loadcss">
+	loadCSS( "<?php //bloginfo('stylesheet_directory');?>/css/style.css", document.getElementById( "loadcss" ) );
+	</script>-->
 
 	<!-- Los favicones -->
 	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('stylesheet_directory');?>/img/favicon.png" />
@@ -226,18 +227,22 @@ $twitter_contact  = of_get_option('twitter_contact', '');
 			</nav>
 			<div class="clearboth"></div>
 
-		<?php
-		// El titular principal h1 solo en la home, en el resto de las páginas será un h2
-		if( is_home() ) { ?>
-			<!-- <h1 class="heading__title">
-				<?php bloginfo("description");?>
-			</h1> -->
-		<?php } else { ?>
-			<!-- <h2 class="heading__title">
-				<?php bloginfo("description");?>
-			</h2> -->
-		<?php } ?>
 		</header>
-		<?php
-				// Las miguillas de pan
+			<!-- Sirve para englogar la pagina, sidebar y single -->
+
+			<div class="englobador">
+			<?php
+			// El titular principal h1 solo en la home, en el resto de las páginas será un h2
+			if( is_home() ) { ?>
+				<h1 class="heading__title">
+					<?php bloginfo("description");?>
+				</h1>
+			<?php } else { ?>
+				<!--<h2 class="heading__title">
+					<?php //bloginfo("description");
+					//echo get_the_title();
+					?>
+				</h2>-->
+			<?php } ?>
+			<?php // Las miguillas de pan
 				the_breadcrums();?>

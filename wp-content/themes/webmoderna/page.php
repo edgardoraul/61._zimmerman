@@ -9,10 +9,8 @@
 
 get_header();
 ?>
-<div class="separador"></div>
-
 		<!-- Todo la parte central -->
-		<div class="content">
+		<div class="content con_barra">
 			<main>
 				<?php
 				// Las miguillas de pan
@@ -73,7 +71,7 @@ get_header();
 			</main>
 		</div>
 
-<?php //get_sidebar();?>
+<?php get_sidebar();?>
 
 		<div class="separador"></div>
 <?php get_footer();?>

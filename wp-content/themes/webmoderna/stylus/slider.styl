@@ -6,6 +6,8 @@
 // Un slider
 .slider
 	clear both
+	.owl-controls
+		display none !important
 
 	&__item
 		figure
@@ -18,13 +20,15 @@
 		&__leyenda
 			filter unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#80312720', endColorstr='#80312720',GradientType=1 )")
 			background rgba(gris_fuerte, 0.7)
+			// bottom 0
 			color blanco
-			left 0
-			padding 0.5em 1em
-			position absolute
-			bottom 0
-			font-family fuente_heading_bold
+			font-family fuente_heading
 			font-size 1em
+			left 0
+			padding 0.5em 0
+			margin 0
+			position absolute
+			top 0
 			width 100%
 	
 	// El del los trabajaos realizados
@@ -133,10 +137,10 @@
 				top 8%
 				width auto
 				
-				&:after
+				/*&:after
 					content ""
 					display inline
 					position absolute
 					right -20px
 					triangle(20px, 68px, right, gris_fuerte_transparente)
-					top 0
+					top 0*/

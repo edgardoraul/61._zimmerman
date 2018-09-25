@@ -28,6 +28,7 @@ $codigopostal_web	=	of_get_option( 'codigopostal_web', '' );
 $pais_web			=	of_get_option( 'pais_web', '' );
 $email_contact		=	of_get_option( 'email_contact', '' );
 ?>
+		</div><!-- Fin del englobador -->
 
 		<!-- El footer de la página -->
 		<footer class="footer">
@@ -89,7 +90,7 @@ $email_contact		=	of_get_option( 'email_contact', '' );
 
 			<!-- Ir hacia arriba -->
 			<div id="ir_arriba" class="gotop">
-				<a href="#" title="<?php _e('Ir hacia arriba', 'webmoderna');?>"></a>
+				<a href="#" class="icon-arrow-up icon-right" title="<?php _e('Ir hacia arriba', 'webmoderna');?>"></a>
 			</div>
 		</footer>
 	</div>

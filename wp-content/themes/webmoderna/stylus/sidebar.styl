@@ -1,24 +1,26 @@
 // El Sidebar y todo su contenido
 .sidebar
-	background blanco_puro
+	// background blanco_puro
 	box-sizing border-box
 	margin 0
 	overflow hidden
 	vertical-align top
 	
 	&__section
+		// border 1px solid pink
 		box-sizing border-box
 		margin $em
 		text-align left
 
 		&__article
-			border 1px solid gris_fuerte
-			border-radius 0 0 3px 3px
+			border 1px solid blanco_grisaceo2
+			// border-radius 0 0 3px 3px
 			box-sizing border-box
-			color gris_suave
+			color gris
 			line-height 150%
 			overflow hidden
 			padding $em
+			// margin $em
 
 			ul
 				// list-style-image url("../img/Entypo_e766(0)_16.png")
@@ -48,14 +50,15 @@
 				width 100%
 
 				.sidebar__section__article__subtitle
+					font-size $em*0.7
 					margin-top 0
 					margin-bottom 0
 					a
 						text-decoration none
 
 				.sidebar__section__article__fecha
-					font-family fuente_heading_bold_italic
-					font-size 0.8em
+					font-family fuente_heading_bold
+					font-size $em*0.7
 
 			&__figure
 				display block
@@ -125,14 +128,15 @@
 				margin-bottom 0
 
 		&__header
-			background gris_fuerte
-			border-radius 3px 3px 0 0
+			background blanco_grisaceo2
+			// border-radius 3px 3px 0 0	
+			// border-bottom 10px solid gris_suave
 			padding ($em/2) $em
 
 			&__title
 				color gris_suave
 				font-family fuente_heading
-				font-size $em*0.8
+				font-size $em*0.7
 				margin 0
 				padding 0
 				text-transform uppercase
@@ -143,9 +147,10 @@
 	.sidebar
 		display inline-block
 		float right
-		max-width 28%
-		margin-top $em
-		margin-right 10px
+		min-width 30%
+		max-width 30%
+		width 30%
+		// margin-right $em
 		vertical-align top
 
 		&__section
@@ -155,6 +160,9 @@
 				&__post.first-child
 				&__post:first-child
 					margin-top 0.5em
+				&__content-right
+					.sidebar__section__article__subtitle
+						font-size $em*0.9em
 
 		&__section:first-child
 		&__section.first-child

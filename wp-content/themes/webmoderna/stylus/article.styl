@@ -232,7 +232,7 @@
 // Artículos de Páginas
 .page
 	background blanco_puro
-	padding $em
+	margin $em
 	text-align left
 	
 	&__article
@@ -244,7 +244,7 @@
 				margin-top 0.5em
 
 		&__figure
-			border 1px solid plateado
+			border 1px solid blanco_grisaceo2
 			margin 0 auto 1em auto
 			padding 0
 			max-width 400px
@@ -299,8 +299,8 @@
 						bottom 40%
 			
 			figcaption
-				background gris_nube
-				color gris_suave
+				background blanco_grisaceo2
+				color gris
 				font-family fuente_heading_bold
 				// font-style italic
 				font-weight bolder
@@ -314,19 +314,27 @@
 		&__header
 			// background rosa_suave
 			background gris_nube
-			border-bottom 10px solid gris_suave
+			// border-bottom 10px solid gris_suave
+			margin 0 0 $em*0.5 0
 			padding 0.5em
+			text-align center
 
 			&__title
-				// color blanco
+				color gris_suave
 				font-family fuente_heading_bold
-				font-size $em
+				font-size $em*0.9
 				font-weight bolder
 				margin 0
 				padding 0
 				text-transform uppercase
 
-@media all and (min-width: 700px)
+
+@media all and (min-width: 900px)
+	.page
+		margin-top 0
+		margin-left 0
+
+@media all and (min-width: 1200px)
 	.page
 		&__article
 			&__figure
@@ -340,8 +348,6 @@
 			// 	ul, ol, p
 			// 		column-count 2
 			// 		column-gap 2em
-
-
 // Para eliminar el espacio hacia la izquierda
 // @media all and (min-width: 1230px)
 // 	.page

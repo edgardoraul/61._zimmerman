@@ -15,18 +15,19 @@ h1, h2, h3, h4, h5, h6
 		margin 0.5em 0
 
 		a
-			color gris_suave
-			font-size 2em
+			color gris_fuerte
+			font-size $em
+			font-weight lighter
 			text-decoration none
+			transition all 0.2s ease-in-out
 			&:hover
-			&:focus
-				color gris_medio
+				color azul_feisbuc
 	
 	// El Título principal
 	&__title
 		color gris_suave
 		clear both
-		font-size 1em
+		font-size $em*0.7
 		padding-left 0.5em
 		padding-right 0.5em
 
@@ -38,6 +39,7 @@ h1, h2, h3, h4, h5, h6
 	float left
 	margin-left 5px
 	margin-top 5px
+	transition all 0.1s ease-in-out
 	
 	&__figure
 		max-width 200px
@@ -47,8 +49,20 @@ h1, h2, h3, h4, h5, h6
 			width 100%
 
 // Las Mediaqueries
+@media all and (min-width: 400px)
+	.heading
+		&__menu
+			margin $em 0
+
+		&__logo
+			&__figure
+				max-width 300px
+			
+
 @media all and (min-width: 1000px)
 	.heading
+		// display table
+		width 100%
 		// El botón del Menú
 		&__menu
 			display none
@@ -60,5 +74,5 @@ h1, h2, h3, h4, h5, h6
 		
 		// El Título principal
 		&__title
-			font-size 1.5em
-			text-align left
+			font-size $em*1.1
+			// text-align left

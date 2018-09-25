@@ -12,7 +12,7 @@
 <div class="separador"></div>
 
 		<!-- Todo la parte central -->
-		<div class="content">
+		<div class="content con_barra">
 			<main>
 				<?php
 				// Las miguillas de pan

@@ -36,11 +36,11 @@ add_image_size('custom-thumb-900-600', 900, 600, true);
 add_image_size('custom-thumb-900-900', 900, 900, true);
 
 // Sliders
-add_image_size('custom-thumb-600-250', 600, 250, true);
+add_image_size('custom-thumb-600-250', 600, 200, true);
 add_image_size('custom-thumb-900-333', 600, 333, true);
-add_image_size('custom-thumb-1200-500', 1200, 500, true);
-add_image_size('custom-thumb-2400-1000', 2400, 1000, true);
-add_image_size('custom-thumb-3600-1200', 3600, 1500, true);
+add_image_size('custom-thumb-1200-500', 1200, 400, true);
+add_image_size('custom-thumb-2400-1000', 2400, 500, true);
+add_image_size('custom-thumb-3600-1200', 3600, 1000, true);
 
 // Fotos redimensionables según el tamaño de pantalla
 add_image_size('custom-thumb-200-x', 200, false);

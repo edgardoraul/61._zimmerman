@@ -48,6 +48,7 @@
 	function inicio()
 	{
 		$('header nav.nav div.menu ul').addClass('nav__list');
+		$('.sub-menu').prev().addClass('indicador');
 		$('#boton_menu').on("click", transicion_abrir);
 		function transicion_abrir(ev)
 		{
@@ -64,10 +65,14 @@
 					$('.nav__list').addClass('nav__list-abrir');
 					$('.nav__list').removeClass('nav__list-cerrar');
 					$('.nav__list').slideDown('normal');
+					$('#boton_menu').removeClass('icon-menu');
+					$('#boton_menu').addClass('icon-x');
 				} else {
 					$('.nav__list').addClass('nav__list-cerrar');
 					$('.nav__list').removeClass('nav__list-abrir');
 					$('.nav__list').slideUp('normal');
+					$('#boton_menu').removeClass('icon-x');
+					$('#boton_menu').addClass('icon-menu');
 				}
 			}
 		/*
@@ -211,7 +216,9 @@ $( document ).ready( function()
 		items: 1,
 		lazyLoad : true,
 		autoHeight : true,
-		singleItem : true
+		autoWidth : true,
+		singleItem : true,
+		transitionStyle : "fadeUp"
 	});
 
 	// Activación del slider de la home de portfolio
@@ -234,6 +241,8 @@ $(document).ready(function()
 {
 	(function()
 	{
+
+		// Activando el slider
 		$('.swipebox').swipebox({
 			// useCSS : false,
 			// useSVG : false

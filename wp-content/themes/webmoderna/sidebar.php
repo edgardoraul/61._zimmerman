@@ -57,7 +57,7 @@
 				<section class="sidebar__section">
 					<header class="sidebar__section__header">
 						<h3 class="sidebar__section__header__title">
-							<?php _e('Proyectos y artículos publicados', 'webmoderna');?>
+							<?php _e('Clientes', 'webmoderna');?>
 						</h3>
 					</header>
 					<div class="sidebar__section__article">
@@ -100,7 +100,8 @@ if ( $entradas->have_posts() ) {
 									<a href="<?php the_permalink();?>"><?php echo titulo_corto('...', 50);?></a>
 								</h4>
 								<div class="sidebar__section__article__fecha">
-									<span class="icon-calendar-alt-stroke icon-right"></span><?php echo get_the_date();?>
+									<!-- <span class="icon-calendar-alt-stroke icon-right"></span> -->
+									<?php echo get_the_date();?>
 								</div>
 							</div>
 						</article>
@@ -128,7 +129,6 @@ if ( $entradas->have_posts() ) {
 wp_reset_postdata();?>
 					</div>
 				</section>
-
 				<?php dynamic_sidebar('sidebar_right');?>
 			</aside>
 		</div>
