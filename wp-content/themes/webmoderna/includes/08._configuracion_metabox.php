@@ -22,6 +22,15 @@ add_filter( 'rwmb_meta_boxes', 'webmoderna_register_meta_boxes' );
  */
 function webmoderna_register_meta_boxes( $meta_boxes )
 {
+	// Almacenamos las páginas de wordpress
+	$options_pages = array();
+	$options_pages_obj = get_pages('sort_column=post_parent,menu_order');
+	$options_pages[''] = __('Seleccione una página de destino', 'webmoderna');
+	foreach ($options_pages_obj as $page)
+	{
+		$options_pages[$page->ID] = $page->post_title;
+	};
+
 	/**
 	* prefix of meta keys (optional)
 	* Use underscore (_) at the beginning to make keys hidden
@@ -34,9 +43,9 @@ function webmoderna_register_meta_boxes( $meta_boxes )
 		// Meta box id, UNIQUE per meta box. Optional since 4.1.5
 		'id'         => 'standard',
 		// Meta box title - Will appear at the drag and drop handle bar. Required.
-		'title'      => __( 'Botones de acción', 'webmoderna' ),
+		'title'      => __( 'Enlazar con Páginas', 'webmoderna' ),
 		// Post types, accept custom post types as well - DEFAULT is 'post'. Can be array (multiple post types) or string (1 post type). Optional.
-		'post_types' => array( 'mensajes' ),
+		'post_types' => array( 'carteles_post_type' ),
 		// 'post_types' => array( 'home_page' ),
 		// Where the meta box appear: normal (default), advanced, side. Optional.
 		'context'    => 'side',
@@ -47,7 +56,7 @@ function webmoderna_register_meta_boxes( $meta_boxes )
 		// List of meta fields
 		'fields'     => array(
 
-			/*
+	/*
 			// TEXT
 			array(
 				// Field name - Will be used as label
@@ -77,45 +86,9 @@ function webmoderna_register_meta_boxes( $meta_boxes )
 				// CLONES: Add to make the field cloneable (i.e. have multiple value)
 				'clone' => false,
 			),
-			*/
 
-			// CHECKBOX Habilitar o no el botón del libro ebook
-			array(
-				'name' => __( 'Descargar ebook parte 1.', 'webmoderna' ),
-				'id'   => "webmoderna_descarga_1",
-				'type' => 'checkbox',
-				// Value can be 0 or 1
-				'std'  => 0,
-			),
 
-			// CHECKBOX Habilitar o no el botón del libro ebook 2
-			array(
-				'name' => __( 'Descargar ebook parte 2.', 'webmoderna' ),
-				'id'   => "webmoderna_descarga_2",
-				'type' => 'checkbox',
-				// Value can be 0 or 1
-				'std'  => 0,
-			),
 
-			// CHECKBOX Habilitar o no el botón del libro ebook 3
-			array(
-				'name' => __( 'Descargar ebook parte 3.', 'webmoderna' ),
-				'id'   => "webmoderna_descarga_3",
-				'type' => 'checkbox',
-				// Value can be 0 or 1
-				'std'  => 0,
-			),
-
-			// CHECKBOX Habilitar o no el botón de acción 4
-			array(
-				'name' => __( 'Test personalizado.', 'webmoderna' ),
-				'id'   => "webmoderna_test",
-				'type' => 'checkbox',
-				// Value can be 0 or 1
-				'std'  => 0,
-			),
-
-			/*
 			// TEXT
 			array(
 				// Field name - Will be used as label
@@ -143,22 +116,26 @@ function webmoderna_register_meta_boxes( $meta_boxes )
 					'value2' => __( 'Label2', 'webmoderna' ),
 				),
 			),
+			*/
 			// SELECT BOX
+
 			array(
-				'name'        => __( 'Select', 'webmoderna' ),
+				'name'        => __( '', 'webmoderna' ),
 				'id'          => "webmoderna_select",
 				'type'        => 'select',
+
 				// Array of 'value' => 'Label' pairs for select box
-				'options'     => array(
-					'value1' => __( 'Label1', 'webmoderna' ),
-					'value2' => __( 'Label2', 'webmoderna' ),
-				),
+				// 'options'     => array(
+				// 	'value1' => __( 'Label1', 'webmoderna' ),
+				// 	'value2' => __( 'Label2', 'webmoderna' ),
+				// ),
+				'options'			=> $options_pages,
 				// Select multiple values, optional. Default is false.
 				'multiple'    => false,
 				'std'         => 'value2',
-				'placeholder' => __( 'Select an Item', 'webmoderna' ),
+				'placeholder' => __( 'Elegir', 'webmoderna' ),
 			),
-			*/
+
 
 		),
 	);
