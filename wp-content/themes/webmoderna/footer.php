@@ -28,10 +28,11 @@ $codigopostal_web	=	of_get_option( 'codigopostal_web', '' );
 $pais_web			=	of_get_option( 'pais_web', '' );
 $email_contact		=	of_get_option( 'email_contact', '' );
 ?>
-		</div><!-- Fin del englobador -->
+
+			</div><!-- Fin del englobador -->
 
 		<!-- El footer de la página -->
-		<footer class="footer">
+		<footer class="footer animated fadeInUpBig">
 			<!-- Redes sociales -->
 			<div class="footer__redes_sociales">
 				<ul class="footer__redes_sociales__list">
@@ -112,5 +113,6 @@ $email_contact		=	of_get_option( 'email_contact', '' );
 		echo '<script type="text/javascript">' . $google_analitycs . '</script>';
 	};
 	wp_footer();?>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </body>
 </html>

@@ -1,54 +1,57 @@
 // Navegación de post a post, atrás y adelante
 .post_pagination
+	border-top 1px solid blanco_grisaceo2
 	font-family fuente_heading_bold_italic
 	margin 1em 0
-	
+
 	&__back
 	&__next
 		a
-			background azul_feisbuc
-			color blanco
+			// background azul_feisbuc
+			color azul_feisbuc
 			display block
 			padding 0.3em 0.5em
 			text-decoration none
-			
+
 			&:hover
 			&:focus
-				background azul_asfalto
+				color azul_asfalto
 
 	&__back
 		margin-bottom 1px
 
 		a
 			&:before
-				content ""
+				content "\e929"
 				display inline-block
+				font-family "Icomoon"
 				margin-right 1em
-				triangle(10px, 14px, left, blanco)
-	
+				// triangle(10px, 14px, left, blanco)
+
 	&__next
 		text-align right
 
 		a
 			&:after
-				content ""
+				content "\e92a"
 				display inline-block
+				font-family "Icomoon"
 				margin-left 1em
-				triangle(10px, 14px, right, blanco)
+				// triangle(10px, 14px, right, blanco)
 
 @media all and (min-width: 600px)
 	.post_pagination
 		display table
 		width 100%
-		
+
 		&__back
 			margin-bottom 0
 			border-right 1px solid transparent
 
 		&__back
 		&__next
-			display table-cell	
-			
+			display table-cell
+
 
 // Paginación común
 .paginacion
@@ -56,7 +59,7 @@
 	margin 1em 0
 	padding 0
 	overflow hidden
-	
+
 	&__item
 		background gris_fuerte
 		border 1px solid blanco
@@ -76,7 +79,7 @@
 		&:focus
 			background rojo_google
 			color blanco
-		
+
 		&:first-child
 			border-left none
 
@@ -88,7 +91,7 @@
 	// Atrás
 	&__back
 		position relative
-	
+
 		&:before
 			content ""
 			display inline-block
@@ -102,26 +105,24 @@
 			content ""
 			display inline-block
 			triangle(8px, 14px, right, blanco)
-	
+
 
 	// Primero
 	&__first
 		position relative
-		
+
 		&:before
 		&:after
 			content ""
 			display inline-block
 			triangle(5px, 14px, left, blanco)
-	
+
 	// Ultimo
 	&__last
 		position relative
-		
+
 		&:before
 		&:after
 			content ""
 			display inline-block
 			triangle(5px, 14px, right, blanco)
-			
-			

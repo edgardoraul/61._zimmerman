@@ -3,11 +3,11 @@ h1, h2, h3, h4, h5, h6
 	font-family fuente_heading_bold
 
 .heading
-	background blanco_grisaceo2
+	background negro_header
 	// overflow hidden
 	position relative
 	z-index 87
-	
+
 	// El Botón del Menú
 	&__menu
 		display inline-block
@@ -15,14 +15,14 @@ h1, h2, h3, h4, h5, h6
 		margin 0.5em 0
 
 		a
-			color gris_fuerte
+			color amarillo_flor
 			font-size $em
 			font-weight lighter
 			text-decoration none
 			transition all 0.2s ease-in-out
 			&:hover
 				color azul_feisbuc
-	
+
 	// El Título principal
 	&__title
 		color gris_suave
@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6
 	margin-left 5px
 	margin-top 5px
 	transition all 0.1s ease-in-out
-	
+
 	&__figure
 		max-width 200px
 		padding 0
@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6
 		&__logo
 			&__figure
 				max-width 300px
-			
+
 
 @media all and (min-width: 1000px)
 	.heading
@@ -66,12 +66,12 @@ h1, h2, h3, h4, h5, h6
 		// El botón del Menú
 		&__menu
 			display none
-		
+
 		// El logotipo
 		&__logo
 			&__figure
 				margin 0.5em
-		
+
 		// El Título principal
 		&__title
 			font-size $em*1.1

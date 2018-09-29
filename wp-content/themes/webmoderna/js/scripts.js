@@ -17,26 +17,6 @@
 				"height"	: winHeight
 			});
 		}
-
-		/*// Colocador del centro de los carteles de la home
-		var altoCaja		= parseInt( $('.centrales__article__figure').height() );
-		var altoHeader		= parseInt( $('.centrales__article__header').height() );
-		var resultadoTop	= ( altoCaja / 2 ) - ( altoHeader / 2 );
-		alineador();
-		function alineador()
-		{
-			altoCaja		= parseInt( $('.centrales__article__figure').height() );
-			altoHeader		= parseInt( $('.centrales__article__header').height() );
-			resultadoTop	= ( altoCaja / 2 ) - ( altoHeader / 2 );
-			$('.centrales__article__header').css({ "top" : resultadoTop });
-			console.log( altoCaja, altoHeader, resultadoTop );
-		}*/
-
-		$(window).resize( function()
-		{
-			setContainerDims();
-			// alineador();
-		});
 	});
 }());
 

@@ -162,8 +162,8 @@ $meta_paginas_meta_keywords 	= rwmb_meta('meta_paginas_meta_keywords', '');
 <!--[if gt IE 9]><style type="text/css">.gradient { filter: none !important; }</style><![endif]-->
 <?php };?>
 
-	<!-- <link rel="preload" href="<?php bloginfo('stylesheet_directory');?>/css/style.css" as="style" onload="this.rel='stylesheet'" /> -->
-	<link href="https://fonts.googleapis.com/css?family=Muli:400,400i" rel="stylesheet" />
+	<!-- <link rel="preload" href="<?php // bloginfo('stylesheet_directory');?>/css/style.css" as="style" onload="this.rel='stylesheet'" /> -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Muli:400,400i" rel="stylesheet" /> -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/style.css" />
 	<noscript><link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/style.css" /></noscript>
 
@@ -179,7 +179,7 @@ $meta_paginas_meta_keywords 	= rwmb_meta('meta_paginas_meta_keywords', '');
 	</script>-->
 
 	<!-- Los favicones -->
-	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('stylesheet_directory');?>/img/favicon.png" />
+	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('stylesheet_directory');?>/img/favicon.ico" />
 <!-- 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php //bloginfo('stylesheet_directory');?>/img/apple-touch-icon-144x144.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php //bloginfo('stylesheet_directory');?>/img/apple-touch-icon-152x152.png" />
 	<link rel="icon" type="image/png" href="<?php //bloginfo('stylesheet_directory');?>/img/favicon-32x32.png" sizes="32x32" />
@@ -188,7 +188,7 @@ $meta_paginas_meta_keywords 	= rwmb_meta('meta_paginas_meta_keywords', '');
 </head>
 <body>
 	<div class="wrapper">
-		<header class="heading">
+		<header class="heading animated fadeInDownBig">
 			<!-- Logotipo -->
 			<div class="heading__logo">
 				<figure class="heading__logo__figure">
@@ -196,9 +196,9 @@ $meta_paginas_meta_keywords 	= rwmb_meta('meta_paginas_meta_keywords', '');
 					<?php if( $logo_uploader )
 					{
 						echo "<img src='" . $logo_uploader . "' alt='" . get_bloginfo('name') . "' />";
-					} else { ?>	
+					} else { ?>
 						<img
-							src="<?php bloginfo('stylesheet_directory');?>/img/logo_200w.png" 
+							src="<?php bloginfo('stylesheet_directory');?>/img/logo_200w.png"
 							alt="<?php bloginfo('name');?>"
 							srcset="<?php bloginfo('stylesheet_directory');?>/img/logo_200w.png 200w, <?php bloginfo('stylesheet_directory');?>/img/logo_400w.png 400w, <?php bloginfo('stylesheet_directory');?>/img/logo_600w.png 600w"
 							sizes="(max-width: 200px) 100vw, 200px"
@@ -228,9 +228,7 @@ $meta_paginas_meta_keywords 	= rwmb_meta('meta_paginas_meta_keywords', '');
 			<div class="clearboth"></div>
 
 		</header>
-			<!-- Sirve para englogar la pagina, sidebar y single -->
 
-			<div class="englobador">
 			<?php
 			// El titular principal h1 solo en la home, en el resto de las páginas será un h2
 			if( is_home() ) { ?>
@@ -238,6 +236,9 @@ $meta_paginas_meta_keywords 	= rwmb_meta('meta_paginas_meta_keywords', '');
 					<?php bloginfo("description");?>
 				</h1>
 			<?php } else { ?>
+				<!-- Sirve para englogar la pagina, sidebar y single -->
+				<div class="englobador">
+
 				<!--<h2 class="heading__title">
 					<?php //bloginfo("description");
 					//echo get_the_title();

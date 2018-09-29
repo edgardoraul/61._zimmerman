@@ -10,12 +10,12 @@
 get_header();
 ?>
 		<!-- Todo la parte central -->
-		<div class="content con_barra">
+		<div class="content con_barra animated fadeInLeftBig">
 			<main>
 				<?php
 				// Las miguillas de pan
 				// the_breadcrums();?>
-				
+
 
 				<!-- La Página en si -->
 				<section class="page">

@@ -9,12 +9,12 @@
 ?>
 <?php get_header();?>
 		<!-- Todo la parte central -->
-		<div class="content con_barra">
+		<div class="content con_barra animated fadeInLeftBig">
 			<main>
 				<?php
 				// Las miguillas de pan
 				//the_breadcrums();?>
-				
+
 
 				<!-- Single -->
 				<section class="page">
@@ -56,10 +56,10 @@
 							</div>
 						</div>
 
-						
+
 						<!-- Un slider para lo producido -->
 						<div id="owl-galeria" class="owl-carousel slider__secundario">
-						<?php 
+						<?php
 
 						$images = rwmb_meta( 'webmoderna_imagenes', 'size=custom-thumb-300-300' );
 
@@ -76,7 +76,7 @@
 									</div>';
 							}
 						}?>
-								
+
 						</div>
 					</article>
 
@@ -93,7 +93,7 @@
 						<?php comments_template();?>
 					</div>
 
-					
+
 					<!-- La paginación de post -->
 					<?php if ( comments_open() ) { ?>
 					<div class="post_pagination">
@@ -116,7 +116,7 @@
 				</section>
 			</main>
 		</div>
-		
+
 <?php get_sidebar();?>
 
 		<div class="separador"></div>

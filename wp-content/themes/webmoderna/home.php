@@ -13,9 +13,9 @@
 ?>
 
 		<!-- El Slider -->
-		<div class="slider slider__home">
+		<div class="slider slider__home animated fadeInUpBig">
 			<div id="owl-dos" class="owl-carousel">
-		<?php 
+		<?php
 
 		// WP_Query arguments
 		$args = array (
@@ -92,10 +92,12 @@
 <?php //};?>
 		<!-- Fin del Slider -->
 
-		
+		<!-- El englobador -->
+		<div class="englobador">
+
 		<!-- Contenido Centrales -->
-		<section class="centrales">
-		<?php 
+		<section class="centrales animated fadeInUpBig">
+		<?php
 		// Reemplazando con un loop especial
 		$args = array (
 			'post_type'	=> array( 'carteles_post_type' ),
@@ -147,7 +149,7 @@
 		<?php //get_sidebar();?>
 
 		<!-- El Slider -->
-		<div class="slider">
+		<div class="slider animated fadeInDownBig">
 		<?php // Variables
 		$portfolio_home = of_get_option('portfolio_home','');
 		$contenido_portfolio_home = of_get_option('contenido_portfolio_home',''); ?>
@@ -157,8 +159,8 @@
 						<?php if ( $portfolio_home )
 						{
 							echo $portfolio_home;
-						} 
-						else 
+						}
+						else
 						{
 							echo 'Titular ejemplo...';
 						}?>
@@ -175,7 +177,7 @@
 					</blockquote>
 				</header>
 			    <div id="owl-uno" class="owl-carousel slider__secundario">
-		<?php 
+		<?php
 		// ========================== El loop del slider ========================
 
 		// WP_Query arguments

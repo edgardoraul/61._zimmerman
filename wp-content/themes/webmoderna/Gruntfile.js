@@ -9,11 +9,11 @@ module.exports = function(grunt)
 			compresor: {
 				files: {
 					'js/scripts.min.js': [
-						// 'js/jquery.js',
-						'js/placeholder.js',
+						// 'js/jquery-1.12.4.min.js',
 						'js/owl.carousel.js',
 						// 'js/jquery.placeholder.js',
 						'js/jquery.swipebox.js',
+						'js/placeholder.js',
 						'js/scripts.js'
 					]
 				}
@@ -47,7 +47,7 @@ module.exports = function(grunt)
                     ]
                 },
                 options: {
-                    proxy: "localhost/61._zimmerman/"   
+                    proxy: "localhost/61._zimmerman/"
                 }
             }
         } // browserSync*/

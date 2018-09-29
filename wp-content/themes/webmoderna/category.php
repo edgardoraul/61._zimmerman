@@ -14,12 +14,12 @@
 				<?php
 				// Las miguillas de pan
 				// the_breadcrums();?>
-				
+
 
 				<!-- El listado de los posts -->
 				<section class="entradas">
-					<header class="entradas__header">
-						<h1 class="entradas__header__title">
+					<header class="page__article__header">
+						<h1 class="page__article__header__title">
 							<?php //_e('Categoría de Noticia: ', 'webmoderna');
 							echo  single_cat_title( '', false );?>
 						</h1>
@@ -47,7 +47,7 @@
 								</h2>
 							</header>
 							<div class="entradas__article__content">
-								
+
 								<!-- Las Categorías -->
 								<!-- <div class="categorizacion">
 									<div class="categorizacion__icono">
@@ -71,19 +71,19 @@
 								</div> -->
 
 								<!-- La fecha de publicación -->
-								<!-- <div class="categorizacion">
+								<div class="categorizacion">
 									<div class="categorizacion__icono">
 										<span class="icon-calendar icon-left icon-right"></span>
 									</div>
 									<div class="categorizacion__list">
-										<span><?php //echo get_the_date();?></span>
-										<?php /*if ( get_comments_number( $post->ID ) != 0 )
+										<span><?php echo get_the_date();?></span>
+										<?php if ( get_comments_number( $post->ID ) != 0 )
 										{
 											echo '; <span class="icon-bubbles3 icon-left"></span><a class="importancia" title="' . get_comments_number( $post->ID ) . __(' comentarios', 'webmoderna') . '" href="' . get_comments_link( $post->ID ) . '">' . get_comments_number( $post->ID ) . '</a>';
-										}*/
+										}
 										?>
 									</div>
-								</div> -->
+								</div>
 							</div>
 						</div>
 					</article>

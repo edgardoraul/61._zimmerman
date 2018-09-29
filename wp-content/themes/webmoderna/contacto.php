@@ -11,8 +11,8 @@
 
 // La primera línea de todas. This MUST be called prior to any output including whitespaces and line breaks!
 if(	!isset( $_SESSION ) )
-{ 
-	session_start(); 
+{
+	session_start();
 }
 
 // Definición de variables
@@ -124,7 +124,7 @@ function process_si_contact_form()
 				// . "Fecha y Hora: $time<br />"
 				// . "Navegador web: {$_SERVER['HTTP_USER_AGENT']}<br />";
 				// charset=ISO-8859-1
-				
+
 
 			// $message = wordwrap ($message, 70 );
 
@@ -175,7 +175,7 @@ get_header();
 							</h1>
 							<?php
 							// Las miguillas de pan
-							//the_breadcrums();?>				
+							//the_breadcrums();?>
 						</header>
 
 						<?php rewind_posts(); if ( have_posts() ) : while ( have_posts() ) : the_post();?>
@@ -223,18 +223,19 @@ elseif ( isset( $_SESSION['ctform']['success'] ) && $_SESSION['ctform']['success
 								<textarea  name="ct_message" id="ct_message" maxlength="1000" placeholder="<?php _e('Escribir aquí', 'webmoderna');?>..."><?php echo htmlspecialchars(@$_SESSION['ctform']['ct_message']) ?></textarea>
 
 								<div class="verificacion">
-									<h4><?php _e('Escribe el código de la imagen', 'webmoderna');?></h4>
-									<div class="respuesta"><?php echo @$_SESSION['ctform']['captcha_error'];?></div>
+									<!-- <h4><?php //_e('Escribe el código de la imagen', 'webmoderna');?></h4>
+									<div class="respuesta"><?php //echo @$_SESSION['ctform']['captcha_error'];?></div>
 
-									<img id="siimage" class="captcha--imagen" src="<?php bloginfo('stylesheet_directory');?>/includes/securimage/securimage_show.php?sid=358a297ce08f7cb69a2ff8bd52a7d63c" alt="CAPTCHA Image" />
-									<!-- <object class="pointer objeto_flash" type="application/x-shockwave-flash" data="<?php //bloginfo('stylesheet_directory');?>/includes/securimage/securimage_play.swf?bgcol=#ffffff&amp;icon_file=<?php //bloginfo('stylesheet_directory');?>/includes/securimage/images/audio_icon.png&amp;audio_file=<?php //bloginfo('stylesheet_directory');?>/includes/securimage/securimage_play.php">
+									<img id="siimage" class="captcha--imagen" src="<?php //bloginfo('stylesheet_directory');?>/includes/securimage/securimage_show.php?sid=358a297ce08f7cb69a2ff8bd52a7d63c" alt="CAPTCHA Image" />
+									<object class="pointer objeto_flash" type="application/x-shockwave-flash" data="<?php //bloginfo('stylesheet_directory');?>/includes/securimage/securimage_play.swf?bgcol=#ffffff&amp;icon_file=<?php //bloginfo('stylesheet_directory');?>/includes/securimage/images/audio_icon.png&amp;audio_file=<?php //bloginfo('stylesheet_directory');?>/includes/securimage/securimage_play.php">
 										<param class="pointer objeto_flash__param" name="movie" value="<?php //bloginfo('stylesheet_directory');?>/includes/securimage/securimage_play.swf?bgcol=#ffffff&amp;icon_file=<?php //bloginfo('stylesheet_directory');?>/includes/securimage/images/audio_icon.png&amp;audio_file=<?php //bloginfo('stylesheet_directory');?>/includes/securimage/securimage_play.php" />
-									</object> -->
-									<a class="recargar__imagen" href="#" title="Recargar imagen" onclick="document.getElementById('siimage').src = '<?php bloginfo('stylesheet_directory');?>/includes/securimage/securimage_show.php?sid=' + Math.random(); this.blur(); return false">
-										<img src="<?php bloginfo('stylesheet_directory');?>/includes/securimage/images/refresh.png" alt="<?php _e('Recargar imagen', 'webmoderna');?>" height="32" width="32" onclick="this.blur()" />
+									</object>
+									<a class="recargar__imagen" href="#" title="Recargar imagen" onclick="document.getElementById('siimage').src = '<?php //bloginfo('stylesheet_directory');?>/includes/securimage/securimage_show.php?sid=' + Math.random(); this.blur(); return false">
+										<img src="<?php //bloginfo('stylesheet_directory');?>/includes/securimage/images/refresh.png" alt="<?php //_e('Recargar imagen', 'webmoderna');?>" height="32" width="32" onclick="this.blur()" />
 									</a>
 
-									<input  class="captcha__input" type="text" id="ct_captcha" name="ct_captcha"  placeholder="abc12" maxlength="8" />
+									<input  class="captcha__input" type="text" id="ct_captcha" name="ct_captcha"  placeholder="abc12" maxlength="8" /> -->
+									<div class="g-recaptcha" data-sitekey="6Lcbt3IUAAAAAECvTE-RJnSsgO-LeTAOhipQBe8t"></div>
 								</div>
 
 								<div class="alineacion__izquierda">

@@ -19,6 +19,7 @@ wp-content/themes/sydney/
 wp-content/themes/vw-automobile-lite/
 wp-content/themes/wowsome/
 wp-content/themes/zerif-pro/
+wp-content/themes/canard-wpcom/
 
 wp-content/upgrade/
 wp-content/languages/
@@ -49,6 +50,7 @@ xmlrpc.php
 /sitemap.xml.gz
 
 node_modules/
+/img/
 
 *.doc
 *.docx

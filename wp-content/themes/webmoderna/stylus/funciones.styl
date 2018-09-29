@@ -81,4 +81,54 @@ white-space_pre-wrap()
 	white-space -moz-pre-wrap
 	white-space -webkit-pre-wrap
 
+// transformaciones
+transform(arguments)
+	-o-transform arguments
+	-ms-transform arguments
+	-moz-transform arguments
+	-webkit-transform arguments
 
+// Coloca una transicion, imagen y preciosez a las imagenes con enlace
+imagenizador()
+	&:after
+		background rgba(negro_header, 0.5)
+		content ""
+		height 100%
+		left 0
+		opacity 0
+		position absolute
+		top 0
+		transition_comun()
+		width 100%
+		z-index 3
+
+	&:before
+		// border 1px solid red
+		color blanco
+		// content "+"
+		content: "\e9b5";
+		font-family "Icomoon"
+		font-size $em
+		// height 60px
+		line-height 100%
+		left 50%
+		margin -10px 0 0 -10px
+		opacity 0
+		position absolute
+		text-decoration none
+		transform(scale(10))
+		transition_comun()
+		top 50%
+		// width 40px
+		z-index 4
+
+	&:hover
+	&:focus
+		&:after
+		&:before
+			opacity 1
+			text-decoration none
+
+		&:before
+			transform(scale(1))
+			top 50%

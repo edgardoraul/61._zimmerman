@@ -30,7 +30,7 @@
 			position absolute
 			top 0
 			width 100%
-	
+
 	// El del los trabajaos realizados
 	&__secundario
 		box-sizing border-box
@@ -58,63 +58,20 @@
 					// 	height 100px
 					// 	left 50%
 					// 	margin-left -2px
-					// 	margin-right 0 
+					// 	margin-right 0
 					// 	width 4px
 					// 	position absolute
 					// 	top -100px
 
 				a
 					display block
+					border-radius 0 25% 0 25%
+					imagenizador()
+					overflow hidden
 					position relative
 					text-decoration none
 					transition_comun()
 
-					&:before
-						filter unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#8002A79E', endColorstr='#8002A79E',GradientType=1 )")
-						background rgba(amarillo_flor, 0.5)
-						border-radius 0 25% 0 25%
-						content ""
-						height 0
-						left 50%
-						opacity 0
-						position absolute
-						top 50%
-						transition_comun()
-						width 0
-						z-index 3
-					
-					&:after
-						bottom 0
-						color blanco
-						content "+"
-						font-family Monospace
-						font-size 60px
-						height 60px
-						line-height 100%
-						left 50%
-						margin -30px 0 0 -20px
-						opacity 0
-						position absolute
-						text-decoration none
-						transition 0.1s all 0.3s ease
-						// top 0
-						width 40px
-						z-index 4
-					
-					&:hover
-					&:focus
-						&:before
-							height 100%
-							left 0
-							opacity 1
-							text-decoration none
-							top 0
-							width 100%
-						&:after
-							opacity 1
-							// top 50%
-							bottom 40%
-							
 
 				img
 					border 1px solid gris_nube
@@ -136,7 +93,7 @@
 				padding 15px
 				top 8%
 				width auto
-				
+
 				/*&:after
 					content ""
 					display inline

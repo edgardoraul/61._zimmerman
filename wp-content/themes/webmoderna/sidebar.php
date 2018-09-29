@@ -7,7 +7,7 @@
 */
 ?>
 <!-- La barra Lateral -->
-		<div class="sidebar">
+		<div class="sidebar animated fadeInRightBig">
 			<aside>
 				<?php
 
@@ -109,7 +109,7 @@ if ( $entradas->have_posts() ) {
 <?php	}
 } else {
 	// no posts found ?>
-						
+
 						<article class="sidebar__section__article__post">
 							<div class="sidebar__section__article__content-left">
 								<figure class="sidebar__section__article__figure">
