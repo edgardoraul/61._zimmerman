@@ -245,27 +245,65 @@
 
 
 		&__header
-			// background rosa_suave
+			background blanco_grisaceo2
 			background gris_nube
 			// border-bottom 10px solid gris_suave
-			margin 0 0 $em*0.5 0
+			margin-bottom $em
 			padding 0.5em
+			position relative
 			text-align center
 
 			&__title
-				color gris_suave
+				// background amarillo_flor
+				display inline-block
 				font-family fuente_heading_bold
-				font-size $em*0.9
+				font-size $em*0.8
 				font-weight bolder
 				margin 0
 				padding 0
+				position relative
 				text-transform uppercase
+				z-index 4
 
+	&__background__ocupador
+		background-attachment fixed
+		background-clip border-box
+		background-origin border-box
+		background-position 50% 50%
+		background-repeat no-repeat
+		background-size(cover)
+		// border 1px solid red
+		padding $em*4 $em
+		position relative
+		margin-top $em
+		
+		.page__article__header
+			margin $em 0
+			padding $em
+
+		.page__article__header__title
+			font-size $em*1.1
+			color blanco_puro
+
+
+		&:before
+			background-color negro_transparente
+			content ""
+			left 0
+			height 100%
+			position absolute
+			top 0
+			width 100%
+			z-index 1
 
 @media all and (min-width: 900px)
 	.page
 		margin-top 0
 		margin-left 0
+		
+		&__background__ocupador
+			.page__article__header__title
+				font-size $em*2
 
 @media all and (min-width: 1200px)
 	.page

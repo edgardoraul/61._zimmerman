@@ -13,7 +13,7 @@
 			<main>
 				<?php
 				// Las miguillas de pan
-				the_breadcrums();?>
+				// the_breadcrums();?>
 				
 
 				<!-- El listado de los posts -->

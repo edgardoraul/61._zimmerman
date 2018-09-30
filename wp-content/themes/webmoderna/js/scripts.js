@@ -195,7 +195,7 @@ $( document ).ready( function()
 		autoPlay: true,
 		items: 1,
 		lazyLoad : true,
-		autoHeight : true,
+		// autoHeight : true,
 		autoWidth : true,
 		singleItem : true,
 		transitionStyle : "fadeUp"

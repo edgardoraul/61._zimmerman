@@ -90,7 +90,7 @@ transform(arguments)
 
 // Coloca una transicion, imagen y preciosez a las imagenes con enlace
 imagenizador()
-	&:after
+	&:before
 		background rgba(negro_header, 0.5)
 		content ""
 		height 100%
@@ -102,7 +102,7 @@ imagenizador()
 		width 100%
 		z-index 3
 
-	&:before
+	&:after
 		// border 1px solid red
 		color amarillo_flor
 		// content "+"
@@ -129,6 +129,6 @@ imagenizador()
 			opacity 1
 			text-decoration none
 
-		&:before
+		&:after
 			transform(scale(1))
 			top 50%

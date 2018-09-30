@@ -30,6 +30,7 @@ $email_contact		=	of_get_option( 'email_contact', '' );
 ?>
 
 			</div><!-- Fin del englobador -->
+		</div>
 
 		<!-- El footer de la página -->
 		<footer class="footer">
@@ -94,7 +95,7 @@ $email_contact		=	of_get_option( 'email_contact', '' );
 				<a href="#" class="icon-arrow-up icon-right" title="<?php _e('Ir hacia arriba', 'webmoderna');?>"></a>
 			</div>
 		</footer>
-	</div>
+
 	<!--<script type="text/javascript" src="//code.jquery.com/jquery-2.1.0.min.js"></script>-->
 	<!--<script type="text/javascript" defer src="//code.jquery.com/jquery-1.12.4.min.js" crossorigin="anonymous"></script>-->
 	<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" defer src="<?php bloginfo('stylesheet_directory');?>/js/jquery-1.12.4.min.js"><\/script>')</script>
@@ -104,15 +105,15 @@ $email_contact		=	of_get_option( 'email_contact', '' );
 	// El script para compartir
 	if ( $add_this_script )
 	{
-		echo '<script type="text/javascript" async defer src="' . $add_this_script . '"></script>';
+		// echo '<script type="text/javascript" async defer src="' . $add_this_script . '"></script>';
 	};
 
 	// El google Analitics
 	if ( $google_analitycs )
 	{
-		echo '<script type="text/javascript">' . $google_analitycs . '</script>';
+		// echo '<script type="text/javascript">' . $google_analitycs . '</script>';
 	};
 	wp_footer();?>
-	<script async defer src='https://www.google.com/recaptcha/api.js'></script>
+	<!--<script async defer src='https://www.google.com/recaptcha/api.js'></script>-->
 </body>
 </html>
