@@ -1,8 +1,11 @@
 // Navegación de post a post, atrás y adelante
 .post_pagination
 	border-top 1px solid blanco_grisaceo2
+	border-bottom 1px solid blanco_grisaceo2
 	font-family fuente_heading_bold_italic
-	margin 1em 0
+	margin $em 0
+	padding-bottom $em
+	padding-top $em
 
 	&__back
 	&__next
@@ -10,7 +13,7 @@
 			// background azul_feisbuc
 			color azul_feisbuc
 			display block
-			padding 0.3em 0.5em
+			padding $em*0.5 0
 			text-decoration none
 
 			&:hover

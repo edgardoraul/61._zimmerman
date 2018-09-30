@@ -7,7 +7,7 @@
 */
 ?>
 <!-- La barra Lateral -->
-		<div class="sidebar animated fadeInRightBig">
+		<div class="sidebar">
 			<aside>
 				<?php
 

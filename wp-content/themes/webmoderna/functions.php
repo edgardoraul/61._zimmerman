@@ -69,6 +69,12 @@ require_once "includes/10._breadcrums.php";
 // Paginación
 require_once "includes/11._paginacion.php";
 
+// Carteles Centrales
+require_once "includes/carteles_centrales.php";
+
+// Sliders
+// require_once "includes/los_sliders.php";
+
 // Calendario de Reservas
 // require_once "includes/12._calendario_reservas.php";
 

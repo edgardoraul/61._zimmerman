@@ -17,6 +17,7 @@ $webmoderna_meta_keywords 		= rwmb_meta('webmoderna_meta_keywords', '');
 $webmoderna_meta_descripcion 	= rwmb_meta('webmoderna_meta_descripcion', '');
 $meta_paginas_meta_descripcion 	= rwmb_meta('meta_paginas_meta_descripcion', '');
 $meta_paginas_meta_keywords 	= rwmb_meta('meta_paginas_meta_keywords', '');
+
 ?>
 
 <!DOCTYPE html>
@@ -188,7 +189,7 @@ $meta_paginas_meta_keywords 	= rwmb_meta('meta_paginas_meta_keywords', '');
 </head>
 <body>
 	<div class="wrapper">
-		<header class="heading animated fadeInDownBig">
+		<header class="heading animated slideInDown">
 			<!-- Logotipo -->
 			<div class="heading__logo">
 				<figure class="heading__logo__figure">
@@ -232,9 +233,9 @@ $meta_paginas_meta_keywords 	= rwmb_meta('meta_paginas_meta_keywords', '');
 			<?php
 			// El titular principal h1 solo en la home, en el resto de las páginas será un h2
 			if( is_home() ) { ?>
-				<h1 class="heading__title">
-					<?php bloginfo("description");?>
-				</h1>
+				<div class="heading__title">
+					<h1><?php bloginfo("description");?></h1>
+				</div>
 			<?php } else { ?>
 				<!-- Sirve para englogar la pagina, sidebar y single -->
 				<div class="englobador">
@@ -244,6 +245,6 @@ $meta_paginas_meta_keywords 	= rwmb_meta('meta_paginas_meta_keywords', '');
 					//echo get_the_title();
 					?>
 				</h2>-->
-			<?php } ?>
-			<?php // Las miguillas de pan
-				the_breadcrums();?>
+			<?php
+			// Las miguillas de pan
+			the_breadcrums();}?>

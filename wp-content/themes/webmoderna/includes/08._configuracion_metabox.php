@@ -117,8 +117,7 @@ function webmoderna_register_meta_boxes( $meta_boxes )
 				),
 			),
 			*/
-			// SELECT BOX
-
+			// Un select de enlazes a páginas
 			array(
 				'name'        => __( '', 'webmoderna' ),
 				'id'          => "webmoderna_select",
@@ -135,8 +134,6 @@ function webmoderna_register_meta_boxes( $meta_boxes )
 				'std'         => 'value2',
 				'placeholder' => __( 'Elegir', 'webmoderna' ),
 			),
-
-
 		),
 	);
 /*
