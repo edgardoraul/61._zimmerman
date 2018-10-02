@@ -185,7 +185,12 @@ $meta_paginas_meta_keywords 	= rwmb_meta('meta_paginas_meta_keywords', '');
 	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php //bloginfo('stylesheet_directory');?>/img/apple-touch-icon-152x152.png" />
 	<link rel="icon" type="image/png" href="<?php //bloginfo('stylesheet_directory');?>/img/favicon-32x32.png" sizes="32x32" />
 	<link rel="icon" type="image/png" href="<?php //bloginfo('stylesheet_directory');?>/img/favicon-16x16.png" sizes="16x16" /> -->
-	<?php wp_head();?>
+	<?php
+	if ( is_page("contacto") )
+	{
+		echo "<script async defer src='https://www.google.com/recaptcha/api.js'></script>" . "\n";
+	}
+	wp_head();?>
 </head>
 <body>
 	<div class="wrapper">

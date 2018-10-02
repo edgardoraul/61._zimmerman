@@ -19,6 +19,25 @@ if(	!isset( $_SESSION ) )
 $nombre_sitio	= get_bloginfo('name');
 $email_contact	= of_get_option('email_contact','');
 
+// Las variables para el reCaptcha
+$recaptcha 		= $_POST["g-recaptcha-response"];
+$url 			= 'https://www.google.com/recaptcha/api/siteverify';
+$data 			= array(
+					'secret'	=> '6Lcbt3IUAAAAAMt_ZZogY94nb3CzK1SPMTZ0lfnd',
+					'response' 	=> $recaptcha,
+					'remoteip' 	=> $_SERVER['HTTP_CLIENT_IP'],
+				);
+
+$options 		= array(
+					'http' => array (
+						'method' => 'POST',
+						'content' => http_build_query($data)
+					)
+				);
+
+$context  			= stream_context_create($options);
+$verify 			= file_get_contents($url, false, $context);
+$captcha_success 	= json_decode($verify);
 
 $GLOBALS['DEBUG_MODE'] = 0;
 // CHANGE TO 0 TO TURN OFF DEBUG MODE
@@ -99,10 +118,14 @@ function process_si_contact_form()
 		// This is especially important for ajax calls
 		if ( sizeof( $errors ) == 0 )
 		{
-			require_once 'includes/securimage/securimage.php';
+			/*require_once 'includes/securimage/securimage.php';
 			$securimage = new Securimage();
 
 			if ( $securimage->check( $captcha ) == false )
+			{
+				$errors['captcha_error'] = __('El código de seguridad es incorrecto', 'webmoderna');
+			}*/
+			if( !$captcha_success->success )
 			{
 				$errors['captcha_error'] = __('El código de seguridad es incorrecto', 'webmoderna');
 			}
@@ -128,7 +151,7 @@ function process_si_contact_form()
 
 			// $message = wordwrap ($message, 70 );
 
-			if ( isset($GLOBALS['DEBUG_MODE'] ) && $GLOBALS['DEBUG_MODE'] == false )
+			if ( isset( $GLOBALS['DEBUG_MODE'] ) && $GLOBALS['DEBUG_MODE'] == false )
 			{
 				// send the message with mail()
 				mail( $GLOBALS['ct_recipient'], $GLOBALS['ct_msg_subject'], $message, "From: {$GLOBALS['ct_recipient']}\r\nReply-To: {$email}\r\nContent-type: text/html; charset=utf-8\r\nMIME-Version: 1.0" );
@@ -223,8 +246,8 @@ elseif ( isset( $_SESSION['ctform']['success'] ) && $_SESSION['ctform']['success
 								<textarea  name="ct_message" id="ct_message" maxlength="1000" placeholder="<?php _e('Escribir aquí', 'webmoderna');?>..."><?php echo htmlspecialchars(@$_SESSION['ctform']['ct_message']) ?></textarea>
 
 								<div class="verificacion">
+									<div class="respuesta"><?php echo @$_SESSION['ctform']['captcha_error'];?></div>
 									<!-- <h4><?php //_e('Escribe el código de la imagen', 'webmoderna');?></h4>
-									<div class="respuesta"><?php //echo @$_SESSION['ctform']['captcha_error'];?></div>
 
 									<img id="siimage" class="captcha--imagen" src="<?php //bloginfo('stylesheet_directory');?>/includes/securimage/securimage_show.php?sid=358a297ce08f7cb69a2ff8bd52a7d63c" alt="CAPTCHA Image" />
 									<object class="pointer objeto_flash" type="application/x-shockwave-flash" data="<?php //bloginfo('stylesheet_directory');?>/includes/securimage/securimage_play.swf?bgcol=#ffffff&amp;icon_file=<?php //bloginfo('stylesheet_directory');?>/includes/securimage/images/audio_icon.png&amp;audio_file=<?php //bloginfo('stylesheet_directory');?>/includes/securimage/securimage_play.php">

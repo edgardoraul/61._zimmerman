@@ -1,0 +1,4 @@
+UPDATE zimn_options SET option_value = REPLACE ( option_value, 'http://localhost/61._zimmerman', 'https://webmoderna.com.ar/zimmerman' );
+UPDATE zimn_posts SET guid = REPLACE ( guid, 'http://localhost/61._zimmerman', 'https://webmoderna.com.ar/zimmerman' );
+UPDATE zimn_posts SET post_content = REPLACE ( post_content, 'http://localhost/61._zimmerman', 'https://webmoderna.com.ar/zimmerman' );
+UPDATE zimn_postmeta SET meta_value = REPLACE ( meta_value, 'http://localhost/61._zimmerman', 'https://webmoderna.com.ar/zimmerman' );
