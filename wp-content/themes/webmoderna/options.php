@@ -247,14 +247,14 @@ function optionsframework_options()
 	);
 
 	// Password del mail
-	$options[] = array(
+	/*$options[] = array(
 		'name' => __('Contraseña', 'options_framework_theme'),
 		'desc' => __('Introduzca la contraseña.', 'options_framework_theme'),
 		'id' => 'email_pass',
 		'placeholder' => '***',
 		'class' => '',
 		'type' => 'password'
-	);
+	);*/
 
 	// Teléfono Fijo
 	$options[] = array(

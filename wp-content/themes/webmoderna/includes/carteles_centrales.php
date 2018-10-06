@@ -2,8 +2,6 @@
 // Los carteles centrales
 function centralCarteles()
 {
-		// El enlazador
-		$webmoderna_select	= rwmb_meta('webmoderna_select', '');
 
 
 		// Reemplazando con un loop especial
@@ -29,10 +27,22 @@ function centralCarteles()
 							<?php echo titulo_corto('...', 50);?>
 						</h2>
 					</header>
-					<?php the_post_thumbnail('custom-thumb-300-300');?>
+					<?php
+						// El enlazador
+						$webmoderna_select	= rwmb_meta('webmoderna_select', '');
+						if( $webmoderna_select )
+						{
+							echo '<a href="'.get_permalink($webmoderna_select).'" title="'.get_the_title($webmoderna_select).'" >';
+							the_post_thumbnail('custom-thumb-300-300');
+							echo '</a>';
+						} else {
+							the_post_thumbnail('custom-thumb-300-300');
+						}
+
+					?>
 				</figure>
 				<div class="centrales__article__content">
-					<?php the_content(); echo $webmoderna_select;?>
+					<?php the_content();?>
 				</div>
 			</article>
 

@@ -29,8 +29,8 @@ $meta_paginas_meta_keywords 	= rwmb_meta('meta_paginas_meta_keywords', '');
 <!-- Condidionales del título, descripción y las metakeywords -->
 <?php if ( is_home() || is_search() ) { ?>
 
-	<title><?php bloginfo('name');?></title>
-	<meta property="og:title" content="<?php bloginfo('name');?>" />
+	<title><?php bloginfo('name');?> - <?php bloginfo('description') ?></title>
+	<meta property="og:title" content="<?php bloginfo('name');?> - <?php bloginfo('description') ?>" />
 	<meta property="og:image" content="<?php echo get_stylesheet_directory_uri() . '/img/webmoderna_social.png';?>" />
 <?php
 	if ( $meta_description )

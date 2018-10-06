@@ -76,9 +76,21 @@ $email_contact		=	of_get_option( 'email_contact', '' );
 						echo "<br /><span class='icon-phone'> </span>";
 						echo '<span itemprop="telephone">' . $telefono_fijo . '</span>';
 					};
+					if ( $telefono_celular)
+					{
+						echo '<br />';
+						if( wpmd_is_phone() )
+						{
+							echo '<a class="whatsapp" target="_blank" href="whatsapp://send?phone=' . $telefono_celular . '&text=Hola ' . get_bloginfo("name") . '" title="WhatsApp"><span class="icon-whatsapp"> </span></a>';
+						} else {
+							echo '<span class="icon-whatsapp"> </span>';
+						}
+
+						echo '<span itemprop="telephone">' . $telefono_celular . '</span>';
+					};
 					if ( $email_contact )
 					{
-						echo " - <span class='icon-mail2'> </span>";
+						echo " - <span class='icon-mail icon-left'> </span>";
 						echo '<span itemprop="email">' . $email_contact . '</span>';
 					}
 					?>
