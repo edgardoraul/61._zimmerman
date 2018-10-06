@@ -97,8 +97,8 @@ $email_contact		=	of_get_option( 'email_contact', '' );
 		</footer>
 
 	<!--<script type="text/javascript" src="//code.jquery.com/jquery-2.1.0.min.js"></script>-->
-	<script type="text/javascript" defer src="//code.jquery.com/jquery-1.12.4.min.js" crossorigin="anonymous"></script>
-	<!--<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" defer src="<?php //bloginfo('stylesheet_directory');?>/js/jquery-1.12.4.min.js"><\/script>')</script>-->
+	<!--<script type="text/javascript" defer src="//code.jquery.com/jquery-1.12.4.min.js" crossorigin="anonymous"></script>-->
+	<script defer type="text/javascript">window.jQuery || document.write('<script type="text/javascript" defer src="<?php bloginfo('stylesheet_directory');?>/js/jquery-1.12.4.min.js"><\/script>')</script>
 	<script type="text/javascript" defer src="<?php bloginfo('stylesheet_directory');?>/js/scripts.min.js"></script>
 	<?php
 

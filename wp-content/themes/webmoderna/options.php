@@ -22,7 +22,7 @@ function optionsframework_option_name()
  * Defines an array of options that will be used to generate the settings page and be saved in the database.
  * When creating the 'id' fields, make sure to use all lowercase and no spaces.
  *
- * If you are making your theme translatable, you should replace 'webmoderna'
+ * If you are making your theme translatable, you should replace 'options_framework_theme'
  * with the actual text domain for your theme.  Read more:
  * http://codex.wordpress.org/Function_Reference/load_theme_textdomain
  */
@@ -92,6 +92,37 @@ function optionsframework_options()
 		'type'			=>	'textarea',
 	);
 
+	// Obterner claves privadas y publicas de reCaptcha
+	$options[] = array(
+		'name' 			=> __('Conseguir las claves públicas y privadas para Google reCaptcha', 'options_framework_theme'),
+		'desc' 			=> '<a class="button-primary" style="float:none;" target="_blank" title="Google reCaptcha" href="https://www.google.com/recaptcha/admin">' . __('Obtener', 'options_framework_theme') . '</a>',
+		'id' 			=> 'obtencion',
+		'placeholder'	=> '',
+		'class'			=> '',
+		'type' 			=> 'info',
+	);
+
+
+	// Clave privada de google recaptcha
+	$options[] = array(
+		'name' 			=> __('Clave Secreta de Google reCaptcha', 'options_framework_theme'),
+		'desc' 			=> __('Introduzca su clave secreta.', 'options_framework_theme'),
+		'id' 			=> 'reCaptchaClavePrivada',
+		'placeholder'	=> 'jf8erpandoasd98wepa...',
+		'class'			=> '',
+		'type' 			=> 'text',
+	);
+
+	// Clave pública de google recaptcha
+	$options[] = array(
+		'name' 			=> __('Clave pública de Google reCaptcha', 'options_framework_theme'),
+		'desc' 			=> __('Introduzca su clave pública.', 'options_framework_theme'),
+		'id' 			=> 'reCaptchaClavePublica',
+		'placeholder'	=> 'qwoeg9384sd98wepa...',
+		'class'			=> '',
+		'type' 			=> 'text',
+	);
+
 
 	/*====================================================================================*/
 	/* =================== Pestaña información de contacto ============================== */
@@ -150,7 +181,7 @@ function optionsframework_options()
 		'type' => 'text',
 	);
 
-	// GitHub
+	/*// GitHub
 	$options[] = array(
 		'name' => __('GitHub', 'options_framework_theme'),
 		'desc' => __('Introduzca su enlace a GitHub.', 'options_framework_theme'),
@@ -158,7 +189,7 @@ function optionsframework_options()
 		'placeholder' => 'github.com/usuario',
 		'class' => '',
 		'type' => 'text',
-	);
+	);*/
 
 	// Add This. Solo el enlace al script
 	/*$options[] = array(
@@ -215,15 +246,15 @@ function optionsframework_options()
 		'type' => 'text',
 	);
 
-/*	// Email de Ventas
+	// Password del mail
 	$options[] = array(
-		'name' => __('E-mail de Ventas', 'options_framework_theme'),
-		'desc' => __('Introduzca el Email para el departamento de Ventas, se mostrará al pie del sitio web en un ícono.', 'options_framework_theme'),
-		'id' => 'email_contact_ventas',
-		'placeholder' => 'ventas@lo-que-sea.com.ar',
+		'name' => __('Contraseña', 'options_framework_theme'),
+		'desc' => __('Introduzca la contraseña.', 'options_framework_theme'),
+		'id' => 'email_pass',
+		'placeholder' => '***',
 		'class' => '',
-		'type' => 'text'
-	);*/
+		'type' => 'password'
+	);
 
 	// Teléfono Fijo
 	$options[] = array(
@@ -237,10 +268,10 @@ function optionsframework_options()
 
 	// Teléfono Celular
 	$options[] = array(
-		'name' => __('Teléfono Celular', 'options_framework_theme'),
+		'name' => __('Celular con WhatsApp', 'options_framework_theme'),
 		'desc' => __('Introduzca su teléfono celular incluyendo el código de área.', 'options_framework_theme'),
 		'id' => 'telefono_celular',
-		'placeholder' => '0351-15882213',
+		'placeholder' => '+549261882213',
 		'class' => 'mini',
 		'type' => 'text',
 	);
@@ -257,7 +288,7 @@ function optionsframework_options()
 		'name' => __('Dirección', 'options_framework_theme'),
 		'desc' => __('Introduzca calle, número, piso, departamento.', 'options_framework_theme'),
 		'id' => 'direccion_web',
-		'placeholder' => __('Man Sartín 453, Dpto. 3°A.', 'webmoderna'),
+		'placeholder' => __('Man Sartín 453, Dpto. 3°A.', 'options_framework_theme'),
 		'class' => '',
 		'type' => 'text',
 		// 'type' => 'editor',
@@ -269,7 +300,7 @@ function optionsframework_options()
 		'name' => __('Localidad', 'options_framework_theme'),
 		'desc' => __('Ciudad, pueblo.', 'options_framework_theme'),
 		'id' => 'localidad_web',
-		'placeholder' => __('Las Catitas.', 'webmoderna'),
+		'placeholder' => __('Las Catitas.', 'options_framework_theme'),
 		'class' => '',
 		'type' => 'text',
 	);
@@ -279,7 +310,7 @@ function optionsframework_options()
 		'name' => __('Departamento', 'options_framework_theme'),
 		'desc' => __('Departamento, partido, región.', 'options_framework_theme'),
 		'id' => 'departamento_web',
-		'placeholder' => __('Tulumba.', 'webmoderna'),
+		'placeholder' => __('Tulumba.', 'options_framework_theme'),
 		'class' => '',
 		'type' => 'text',
 	);
@@ -289,7 +320,7 @@ function optionsframework_options()
 		'name' => __('Código Postal', 'options_framework_theme'),
 		'desc' => __('Código Postal.', 'options_framework_theme'),
 		'id' => 'codigopostal_web',
-		'placeholder' => __('5001.', 'webmoderna'),
+		'placeholder' => __('5001.', 'options_framework_theme'),
 		'class' => 'mini',
 		'type' => 'text',
 	);
@@ -299,7 +330,7 @@ function optionsframework_options()
 		'name' => __('Provincia', 'options_framework_theme'),
 		'desc' => __('Provincia del país.', 'options_framework_theme'),
 		'id' => 'provincia_web',
-		'placeholder' => __('Tierra del Fuego.', 'webmoderna'),
+		'placeholder' => __('Tierra del Fuego.', 'options_framework_theme'),
 		'class' => 'mini',
 		'type' => 'text',
 	);
@@ -309,7 +340,7 @@ function optionsframework_options()
 		'name' => __('País', 'options_framework_theme'),
 		'desc' => __('País donde se encuentra la empresa.', 'options_framework_theme'),
 		'id' => 'pais_web',
-		'placeholder' => __('República no tan Checa.', 'webmoderna'),
+		'placeholder' => __('República no tan Checa.', 'options_framework_theme'),
 		'class' => '',
 		'type' => 'text',
 	);
@@ -320,7 +351,7 @@ function optionsframework_options()
 		'name' => __('Horario de atención', 'options_framework_theme'),
 		'desc' => __('Introduzca los días de la semana y el horario de atención al público.', 'options_framework_theme'),
 		'id' => 'horario_web',
-		'placeholder' => __('Domingos a Martes; de 2 de la tarde a 14hs.', 'webmoderna'),
+		'placeholder' => __('Domingos a Martes; de 2 de la tarde a 14hs.', 'options_framework_theme'),
 		'class' => '',
 		'type' => 'text',
 	);
@@ -354,7 +385,7 @@ function optionsframework_options()
 		'name'			=>	__('Título del Mensaje 1.', 'options_framework_theme'),
 		'desc'			=>	__('Introduzca titular que se mostrará en el Mensaje 1.', 'options_framework_theme'),
 		'id'			=>	'mensaje_1__titulo',
-		'placeholder'	=> __('Título de ejemplo 1.', 'webmoderna'),
+		'placeholder'	=> __('Título de ejemplo 1.', 'options_framework_theme'),
 		'class'			=>	'',
 		'type'			=>	'text',
 	);
@@ -369,7 +400,7 @@ function optionsframework_options()
 		'name'			=> __('Contenido del Mensaje 1', 'options_framework_theme'),
 		'desc'			=> __('Introduzca el contenido que se mostrará en el Mensaje 1.', 'options_framework_theme'),
 		'id'			=> 'mensaje_1__contenido',
-		'placeholder'	=> __('Contenido ...', 'webmoderna'),
+		'placeholder'	=> __('Contenido ...', 'options_framework_theme'),
 		'class'			=> 'big',
 		'type'			=> 'editor',
 		'settings'		=> $wp_editor_settings,
@@ -396,7 +427,7 @@ function optionsframework_options()
 		'name'			=>	__('Título del Mensaje 2.', 'options_framework_theme'),
 		'desc'			=>	__('Introduzca titular que se mostrará en el Mensaje 2.', 'options_framework_theme'),
 		'id'			=>	'mensaje_2__titulo',
-		'placeholder'	=> __('Título de ejemplo 2.', 'webmoderna'),
+		'placeholder'	=> __('Título de ejemplo 2.', 'options_framework_theme'),
 		'class'			=>	'',
 		'type'			=>	'text',
 	);
@@ -406,7 +437,7 @@ function optionsframework_options()
 		'name' => __('Contenido', 'options_framework_theme'),
 		'desc' => __('Introduzca el contenido del Mensaje 2.', 'options_framework_theme'),
 		'id' => 'mensaje_2__contenido',
-		'placeholder' => __('Contenido ...', 'webmoderna'),
+		'placeholder' => __('Contenido ...', 'options_framework_theme'),
 		'class' => 'big',
 		'type' => 'editor',
 		'settings' => $wp_editor_settings,
@@ -433,7 +464,7 @@ function optionsframework_options()
 		'name'			=>	__('Título del Mensaje 3.', 'options_framework_theme'),
 		'desc'			=>	__('Introduzca un titular que se mostrará en el Mensaje 3.', 'options_framework_theme'),
 		'id'			=>	'mensaje_3__titulo',
-		'placeholder'	=> __('Título de ejemplo 3.', 'webmoderna'),
+		'placeholder'	=> __('Título de ejemplo 3.', 'options_framework_theme'),
 		'class'			=>	'',
 		'type'			=>	'text',
 	);
@@ -443,7 +474,7 @@ function optionsframework_options()
 		'name' => __('Contenido', 'options_framework_theme'),
 		'desc' => __('Introduzca el contenido que se mostrará en el Mensaje 3.', 'options_framework_theme'),
 		'id' => 'mensaje_3__contenido',
-		'placeholder' => __('Contenido ...', 'webmoderna'),
+		'placeholder' => __('Contenido ...', 'options_framework_theme'),
 		'class' => 'big',
 		'type' => 'editor',
 		'settings' => $wp_editor_settings,
@@ -471,7 +502,7 @@ function optionsframework_options()
 		'name'			=>	__('Título del Mensaje 4.', 'options_framework_theme'),
 		'desc'			=>	__('Introduzca un titular que se mostrará en el Mensaje 4.', 'options_framework_theme'),
 		'id'			=>	'mensaje_4__titulo',
-		'placeholder'	=> __('Título de ejemplo 4.', 'webmoderna'),
+		'placeholder'	=> __('Título de ejemplo 4.', 'options_framework_theme'),
 		'class'			=>	'',
 		'type'			=>	'text',
 	);
@@ -481,7 +512,7 @@ function optionsframework_options()
 		'name' => __('Contenido', 'options_framework_theme'),
 		'desc' => __('Introduzca el contenido que se mostrará en el Mensaje 4.', 'options_framework_theme'),
 		'id' => 'mensaje_4__contenido',
-		'placeholder' => __('Contenido ...', 'webmoderna'),
+		'placeholder' => __('Contenido ...', 'options_framework_theme'),
 		'class' => 'big',
 		'type' => 'editor',
 		'settings' => $wp_editor_settings,
@@ -492,7 +523,7 @@ function optionsframework_options()
 	// Almacenamos las páginas de wordpress
 	$options_pages = array();
 	$options_pages_obj = get_pages('sort_column=post_parent,menu_order');
-	$options_pages[''] = __('Seleccione una página de destino', 'webmoderna');
+	$options_pages[''] = __('Seleccione una página de destino', 'options_framework_theme');
 	foreach ($options_pages_obj as $page)
 	{
 		$options_pages[$page->ID] = $page->post_title;
