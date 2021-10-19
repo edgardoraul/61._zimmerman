@@ -2,13 +2,14 @@
 *.zip
 *.rar
 *.gz
+Datos
 wp-config.php
 wp-content/advanced-cache.php
 wp-content/backup-db/
 wp-content/backups/
 wp-content/blogs.dir/
 wp-content/cache/
-wp-content/themes/astra/
+wp-content/themes/asa
 wp-content/themes/best-wp/
 wp-content/themes/canuck/
 wp-content/themes/expansive/
@@ -21,11 +22,11 @@ wp-content/themes/wowsome/
 wp-content/themes/zerif-pro/
 wp-content/themes/canard-wpcom/
 
-wp-content/upgrade/
+wp-content/upgrade
 wp-content/languages/
 wp-content/uploads/
 wp-content/mu-plugins/
-wp-content/plugins/
+wp-content/plugins
 wp-content/wp-cache-config.php
 wp-content/plugins/hello.php
 wp-admin/

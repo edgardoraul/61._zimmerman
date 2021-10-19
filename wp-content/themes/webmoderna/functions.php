@@ -542,4 +542,19 @@ function titulo_corto( $after = null, $length )
 	return $mytitle;
 }
 
+/* Habilitando los js y css del contact form sólo en la pagina de Contacto */
+function deregister_cf7_js() {
+	if ( !is_page(array( 'contacto' ) )) {
+		wp_deregister_script( 'contact-form-7');
+	}
+}
+add_action( 'wp_print_scripts', 'deregister_cf7_js' );
+
+function deregister_ct7_styles() {
+	if ( !is_page(array( 'contacto' ) )) {
+		wp_deregister_style( 'contact-form-7');
+	}
+}
+add_action( 'wp_print_styles', 'deregister_ct7_styles');
+
 ?>
